@@ -5,21 +5,21 @@ import 'package:foxbit_hiring_test_template/data/helpers/websocket.dart';
 import 'package:foxbit_hiring_test_template/domain/entities/coin.dart';
 import 'package:foxbit_hiring_test_template/domain/repositories/coins_repository.dart';
 
-class CoinsUseCase extends UseCase<ListCoinsUseCaseResponse, FoxbitWebSocket> {
+class CoinsUseCase extends UseCase<CoinsUseCaseResponse, FoxbitWebSocket> {
   CoinsUseCase(this._repository);
 
   final ICoinsRepository _repository;
 
   @override
-  Future<Stream<ListCoinsUseCaseResponse>> buildUseCaseStream(
+  Future<Stream<CoinsUseCaseResponse>> buildUseCaseStream(
       FoxbitWebSocket params) async {
-    final StreamController<ListCoinsUseCaseResponse> controller =
-        StreamController<ListCoinsUseCaseResponse>();
+    final StreamController<CoinsUseCaseResponse> controller =
+        StreamController<CoinsUseCaseResponse>();
 
     try {
       final list = await _repository.list(params);
       list.sort((a, b) => a.order.compareTo(b.order));
-      final response = ListCoinsUseCaseResponse(list);
+      final response = CoinsUseCaseResponse(list);
       controller.add(response);
       controller.close();
     } catch (e) {
@@ -30,8 +30,8 @@ class CoinsUseCase extends UseCase<ListCoinsUseCaseResponse, FoxbitWebSocket> {
   }
 }
 
-class ListCoinsUseCaseResponse {
+class CoinsUseCaseResponse {
   final List<Coin> _coins;
   List<Coin> get coins => [..._coins];
-  ListCoinsUseCaseResponse(this._coins);
+  CoinsUseCaseResponse(this._coins);
 }
