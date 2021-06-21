@@ -5,9 +5,8 @@ import 'package:foxbit_hiring_test_template/data/helpers/websocket.dart';
 import 'package:foxbit_hiring_test_template/domain/entities/coin.dart';
 import 'package:foxbit_hiring_test_template/domain/repositories/coins_repository.dart';
 
-class ListCoinsUseCase
-    extends UseCase<ListCoinsUseCaseResponse, FoxbitWebSocket> {
-  ListCoinsUseCase(this._repository);
+class CoinsUseCase extends UseCase<ListCoinsUseCaseResponse, FoxbitWebSocket> {
+  CoinsUseCase(this._repository);
 
   final ICoinsRepository _repository;
 

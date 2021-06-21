@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
-import 'package:foxbit_hiring_test_template/app/pages/list_coins/list_coins_presenter.dart';
+import 'package:foxbit_hiring_test_template/app/pages/coins/coins_presenter.dart';
 import 'package:foxbit_hiring_test_template/data/helpers/websocket.dart';
 import 'package:foxbit_hiring_test_template/domain/entities/coin.dart';
 import 'package:rxdart/rxdart.dart';

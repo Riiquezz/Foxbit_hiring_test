@@ -2,7 +2,7 @@ import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 import 'package:foxbit_hiring_test_template/data/helpers/websocket.dart';
 import 'package:foxbit_hiring_test_template/data/repositories/coins_repository.dart';
 import 'package:foxbit_hiring_test_template/domain/entities/coin.dart';
-import 'package:foxbit_hiring_test_template/domain/usecases/list_coins_usecase.dart';
+import 'package:foxbit_hiring_test_template/domain/usecases/coins_usecase.dart';
 
 class CoinsPresenter extends Presenter {
   Function listCoinsOnComplete;

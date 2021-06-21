@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:foxbit_hiring_test_template/app/utils/format.dart';
 import 'package:foxbit_hiring_test_template/domain/entities/coin.dart';
 
-class CoinTile extends StatelessWidget {
+class CoinCard extends StatelessWidget {
   final Coin coin;
 
-  const CoinTile(this.coin, {Key key}) : super(key: key);
+  const CoinCard(this.coin, {Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Card(
