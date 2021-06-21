@@ -1,4 +1,3 @@
-
 import 'dart:async';
 import 'dart:convert';
 
@@ -22,14 +21,10 @@ class FoxbitWebSocket {
   FoxbitWebSocket() {
     _socket = IOWebsok(host: 'api.foxbit.com.br?origin=android', tls: true);
   }
-  
+
   void connect() {
     _socket.connect();
-    _socket.listen(
-      onData: onMessage,
-      onDone: _onDone,
-      cancelOnError: false
-    );
+    _socket.listen(onData: onMessage, onDone: _onDone, cancelOnError: false);
     _connectedByUser = true;
     _id = 0;
   }
@@ -68,7 +63,7 @@ class FoxbitWebSocket {
     if (data['o'].toString().isNotEmpty) {
       data['o'] = json.decode(data['o'].toString());
     }
-    
+
     streamController.add(data);
   }
 

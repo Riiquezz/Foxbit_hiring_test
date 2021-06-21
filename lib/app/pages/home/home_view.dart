@@ -12,12 +12,12 @@ class HomePageState extends ViewState<HomePage, HomeController> {
 
   @override
   Widget get view => Scaffold(
-    key: globalKey,
-    appBar: AppBar(
-      title: const Text('Home Screen'),
-    ),
-    body: const Center(
-      child: Text('Olá Mundo!'),
-    ),
-  );
+        key: globalKey,
+        appBar: AppBar(
+          title: const Text('Home Screen'),
+        ),
+        body: const Center(
+          child: Text('Olá Mundo!'),
+        ),
+      );
 }

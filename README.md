@@ -1,4 +1,4 @@
-# Pré-requisitos
+# Teste Foxbit
 
 #### O que é permitido:
 - Usar as dependências já adicionadas ao projeto
@@ -20,12 +20,6 @@ O objetivo desse teste é avaliar:
 - uso do Clean Architecture;
 - performance do código;
 - testes automatizados.
-
-# Teste
-
-Você precisará criar a tela de listagem de moedas, conforme layout abaixo, consumindo informações do WebSocket para exibir na tela.
-
-![image](https://user-images.githubusercontent.com/3410356/109640440-3e125400-7b2f-11eb-9def-0708948b0b23.png)
 
 ## Métodos para serem chamados no WebSocket
 

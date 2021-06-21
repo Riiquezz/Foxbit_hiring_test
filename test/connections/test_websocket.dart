@@ -13,7 +13,7 @@ class TestFoxbitWebSocket extends FoxbitWebSocket {
   @override
   void send(String method, dynamic objectData) {
     prepareMessage(method, objectData);
-    
+
     final response = _responses[method];
     if (response != null) {
       Timer(const Duration(milliseconds: 50), () {

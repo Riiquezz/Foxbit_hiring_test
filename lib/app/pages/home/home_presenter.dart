@@ -4,11 +4,11 @@ import 'package:foxbit_hiring_test_template/data/repositories/heartbeat_reposito
 import 'package:foxbit_hiring_test_template/domain/usecases/heartbeat_usecase.dart';
 
 class HomePresenter extends Presenter {
-
   Function heartbeatOnComplete;
   Function(dynamic) heartbeatOnError;
 
-  final HeartbeatUseCase _heartbeatUseCase = HeartbeatUseCase(HeartbeatRepository());
+  final HeartbeatUseCase _heartbeatUseCase =
+      HeartbeatUseCase(HeartbeatRepository());
 
   void sendHeartbeat(FoxbitWebSocket ws) {
     _heartbeatUseCase.execute(_HeartBeatObserver(this), ws);
