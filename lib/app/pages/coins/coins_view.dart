@@ -19,7 +19,8 @@ class CoinsState extends ViewState<CoinsPage, CoinsController> {
           title: const Text('Cotação',
               style: TextStyle(
                 color: Colors.black,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
+                fontSize: 30.0,
               )),
           centerTitle: false,
           elevation: 0.0,
@@ -33,6 +34,7 @@ class CoinsState extends ViewState<CoinsPage, CoinsController> {
                 if (snapshot.hasData) {
                   final coins = snapshot.data;
                   return ListView.builder(
+                    padding: const EdgeInsets.all(8.0),
                     itemCount: coins.length,
                     itemBuilder: (ctx, i) {
                       return CoinCard(coins[i]);

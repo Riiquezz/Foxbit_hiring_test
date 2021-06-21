@@ -7,7 +7,7 @@ class FoxbitApp extends StatelessWidget {
     return MaterialApp(
       title: 'Foxbit Test',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: Colors.grey[300]),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.grey[200]),
       routes: appRoutes,
     );
   }
