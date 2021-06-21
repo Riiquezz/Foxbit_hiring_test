@@ -35,7 +35,7 @@ class CoinsState extends ViewState<CoinsPage, CoinsController> {
                   final coins = snapshot.data;
                   return ListView.builder(
                     padding: const EdgeInsets.all(8.0),
-                    itemCount: coins.length,
+                    itemCount: 5,
                     itemBuilder: (ctx, i) {
                       return CoinCard(coins[i]);
                     },

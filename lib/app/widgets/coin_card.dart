@@ -9,7 +9,7 @@ class CoinCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 30.0,
+      elevation: 8.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       child: Container(
         height: 80.0,
@@ -28,7 +28,7 @@ class CoinCard extends StatelessWidget {
               child: Text(
                 Format.currency(coin.price),
                 style: const TextStyle(
-                    fontSize: 25.0, fontWeight: FontWeight.w500),
+                    fontSize: 21.0, fontWeight: FontWeight.w700),
               ),
             ),
           ],
