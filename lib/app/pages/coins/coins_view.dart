@@ -16,7 +16,11 @@ class CoinsState extends ViewState<CoinsPage, CoinsController> {
   Widget get view => Scaffold(
         key: globalKey,
         appBar: AppBar(
-          title: const Text('Cotação', style: TextStyle(color: Colors.black)),
+          title: const Text('Cotação',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
+              )),
           centerTitle: false,
           elevation: 0.0,
           backgroundColor: Colors.transparent,

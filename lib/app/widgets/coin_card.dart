@@ -22,12 +22,13 @@ class CoinCard extends StatelessWidget {
               Format.change(coin.change),
               style: TextStyle(
                   color: coin.change < 0 ? Colors.red : Colors.green,
-                  fontSize: 16.0),
+                  fontSize: 20.0),
             ),
             FittedBox(
               child: Text(
                 Format.currency(coin.price),
-                style: const TextStyle(fontSize: 20.0),
+                style: const TextStyle(
+                    fontSize: 25.0, fontWeight: FontWeight.w500),
               ),
             ),
           ],
@@ -50,14 +51,14 @@ class CoinCard extends StatelessWidget {
             Text(
               coin.name ?? '',
               style: const TextStyle(
-                fontSize: 16.0,
+                fontSize: 20.0,
                 fontWeight: FontWeight.w800,
               ),
             ),
             const SizedBox(height: 4.0),
             Text(
               coin.product ?? '',
-              style: TextStyle(fontSize: 12.0, color: Colors.grey[500]),
+              style: TextStyle(fontSize: 15.0, color: Colors.grey[500]),
             ),
           ],
         )
